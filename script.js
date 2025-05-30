@@ -1,21 +1,23 @@
+const statusText = document.getElementById("status");
+
 document.getElementById("makeCoffeeBtn").onclick = () => {
   fetch("/on")
-    .then(() => showStatus("Coffee is brewing! ☕"))
-    .catch(() => showStatus("Failed to send request."));
+    .then(() => updateStatus("☕ Coffee is brewing! Yay~"))
+    .catch(() => updateStatus("⚠️ Couldn’t reach Coffio…"));
 };
 
 document.getElementById("scheduleBtn").onclick = () => {
   const time = document.getElementById("scheduleTime").value;
   if (!time) {
-    showStatus("Please pick a time first.");
+    updateStatus("📅 Please choose a time first!");
     return;
   }
 
   fetch(`/schedule?time=${encodeURIComponent(time)}`)
-    .then(() => showStatus(`Coffee scheduled for ${time}`))
-    .catch(() => showStatus("Failed to schedule."));
+    .then(() => updateStatus(`🕐 Coffee scheduled for ${time}!`))
+    .catch(() => updateStatus("⚠️ Couldn’t schedule…"));
 };
 
-function showStatus(msg) {
-  document.getElementById("status").textContent = msg;
+function updateStatus(msg) {
+  statusText.textContent = msg;
 }

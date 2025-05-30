@@ -1,52 +1,87 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #f9f9f9;
   margin: 0;
   padding: 0;
+  font-family: "Quicksand", sans-serif;
+  background: #fff5f8;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
 }
 
-.container {
-  text-align: center;
+.card {
+  background: #fff;
   padding: 30px;
-  background: white;
   border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
   width: 90%;
   max-width: 400px;
 }
 
 h1 {
+  color: #d27d9d;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
   margin-bottom: 30px;
 }
 
-button {
-  padding: 15px 25px;
-  margin: 10px;
-  font-size: 16px;
+.btn {
+  padding: 14px 24px;
   border: none;
   border-radius: 12px;
+  font-size: 16px;
   cursor: pointer;
-  background: #4caf50;
-  color: white;
-  transition: 0.2s;
+  transition: all 0.2s ease;
+  margin: 8px 0;
 }
 
-button:hover {
-  background: #45a049;
+.btn-primary {
+  background-color: #ffb6c1;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #ff9db1;
+}
+
+.btn-secondary {
+  background-color: #dcd6f7;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #c3bfe0;
 }
 
 .scheduler {
   margin-top: 20px;
 }
 
+.scheduler label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #d27d9d;
+}
+
 input[type="time"] {
   font-size: 16px;
-  padding: 8px;
-  border-radius: 10px;
+  padding: 10px;
   border: 1px solid #ccc;
-  margin-top: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.status-text {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #999;
 }

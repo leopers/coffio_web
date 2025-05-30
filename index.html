@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
-    <title>Coffio ☕</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffio Café ☕</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Coffio ☕</h1>
+    <div class="card">
+      <h1>☕ Coffio Café</h1>
+      <p class="subtitle">Start your day with a warm cup ~</p>
 
-      <button id="makeCoffeeBtn">Make Coffee Now</button>
+      <button id="makeCoffeeBtn" class="btn btn-primary">
+        ✨ Make Coffee Now
+      </button>
 
       <div class="scheduler">
-        <label for="scheduleTime">Schedule Brew Time:</label>
+        <label for="scheduleTime">⏰ Schedule Brew</label>
         <input type="time" id="scheduleTime" />
-        <button id="scheduleBtn">Set Schedule</button>
+        <button id="scheduleBtn" class="btn btn-secondary">Set Time 💖</button>
       </div>
 
-      <p id="status"></p>
+      <p id="status" class="status-text">~ Awaiting your command ~</p>
     </div>
 
     <script src="script.js"></script>
